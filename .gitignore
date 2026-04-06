@@ -1,0 +1,106 @@
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+
+.DS_Store
+# =========================
+# Unity Generated Folders
+# =========================
+GuardMera/[Ll]ibrary/
+GuardMera/[Tt]emp/
+GuardMera/[Oo]bj/
+GuardMera/[Bb]uild/
+GuardMera/[Bb]uilds/
+GuardMera/[Ll]ogs/
+GuardMera/[Uu]ser[Ss]ettings/
+GuardMera/[Mm]emoryCaptures/
+GuardMera/[Rr]ecordings/
+
+# =========================
+# General
+# =========================
+*.log
+*.tmp
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# =========================
+# Visual Studio / IDE
+# =========================
+.vs/
+.gradle/
+.consulo/
+ExportedObj/
+
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.DotSettings.user
+
+# =========================
+# Unity Meta / Crash Files
+# =========================
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+mono_crash.*
+
+# =========================
+# Builds
+# =========================
+*.apk
+*.aab
+*.unitypackage
+*.unitypackage.meta
+*.app
+
+# =========================
+# Blender temp files
+# =========================
+*.blend1
+*.blend1.meta
+
+# =========================
+# JetBrains Rider
+# =========================
+[Aa]ssets/Plugins/Editor/JetBrains*
+
+# =========================
+# Addressables
+# =========================
+[Aa]ssets/StreamingAssets/aa*
+[Aa]ssets/AddressableAssetsData/link.xml*
+[Aa]ssets/Addressables_Temp*
+[Aa]ssets/AddressableAssetsData/*/*.bin*
+
+# =========================
+# Visual Scripting
+# =========================
+[Aa]ssets/Unity.VisualScripting.Generated/
+
+# =========================
+# Test Scenes
+# =========================
+[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
