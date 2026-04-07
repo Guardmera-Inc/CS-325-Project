@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6756779743153573436}
   - component: {fileID: 8680134959397875053}
   m_Layer: 0
-  m_Name: TestEnemy
+  m_Name: TestEnemyFlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf12b849e7b32341a7c9ac97783d5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
-  changeDirThreshold: 0.4
-  speed: 10
+  changeDirThreshold: 0.6
+  speed: 15
 --- !u!1 &7158795693211765816
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4, g: 0.91029406, b: 0.96862745, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

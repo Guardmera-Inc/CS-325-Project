@@ -4,6 +4,7 @@ using TMPro;
 
 public class WaveSpawner : MonoBehaviour
 {
+    [SerializeField]
     public static int enemiesAlive = 0;
 
     public Wave[] waves;
@@ -37,39 +38,26 @@ public class WaveSpawner : MonoBehaviour
      IEnumerator SpawnWave()
     {
         Wave wave = waves[waveIndex];
-
-        if(!wave.diffEnemies)
+        foreach(EnemyGroup enemyGroup in wave.eG)
         {
-            enemiesAlive = wave.eCount;
-            for(int i = 0; i < wave.eCount; i++)
-            {
-                SpawnEnemy(wave.enemy);
-                yield return new WaitForSeconds(spawnTiming/wave.rate);
-            }
+            enemiesAlive += enemyGroup.eCount;
         }
-        else
+        foreach(EnemyGroup eG in wave.eG)
         {
-            enemiesAlive = wave.eCount + wave.e2Count + wave.e3Count;
-            for(int i = 0; i < wave.eCount; i++)
+            if(wave.variedTimeBetweenGroups)
             {
-                SpawnEnemy(wave.enemy);
-                yield return new WaitForSeconds(spawnTiming/wave.rate);
+                yield return new WaitForSeconds(eG.delay);
             }
-            if(wave.enemy2 != null)
+            else
             {
-                for(int i = 0; i < wave.e2Count; i++)
-                {
-                    SpawnEnemy(wave.enemy2);
-                    yield return new WaitForSeconds(spawnTiming/wave.rate2);
-                }
-                if(wave.enemy3 != null)
-                {
-
-                    for(int i = 0; i < wave.e3Count; i++)
-                    {
-                        SpawnEnemy(wave.enemy3);
-                        yield return new WaitForSeconds(spawnTiming/wave.rate3);
-                    }
+                yield return new WaitForSeconds(wave.timeBetweenGroups);
+            }
+            if(eG.enemy != null)
+            {
+                for(int i = 0; i < eG.eCount; i++)
+                {    
+                    SpawnEnemy(eG.enemy);
+                    yield return new WaitForSeconds(spawnTiming/eG.rate);
                 }
             }
         }
