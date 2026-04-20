@@ -10,9 +10,15 @@ public class GameMaster : MonoBehaviour
     public int health;
     public int money;
 
+//THIS IS FOR THE SHOP MENU AND TOWER PLACEMENTS
     public GameObject selectedTowerPrefab;
-
     public int selectedTowerCost;
+     public GameObject shopMenu;
+
+//THIS IS FOR FUSING AND TOWER SELECTION FOR THE FUSE MENU
+    public GameObject fuseMenu;
+    public GameObject selectedNode;
+    
 
     void Awake()
     {
@@ -55,7 +61,20 @@ public class GameMaster : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            Debug.Log("YOU DIED");
+            death();
         }
+    }
+
+    public void SelectNode( GameObject node)
+    {
+        selectedNode = node;
+        shopMenu.SetActive(false);
+        fuseMenu.SetActive(true);
+        Debug.Log("menu swapped");
+    }
+
+    public void death()
+    {
+        Debug.Log("YOU DIED");
     }
 }

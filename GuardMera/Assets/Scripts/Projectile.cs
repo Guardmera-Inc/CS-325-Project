@@ -4,6 +4,8 @@ public class Projectile : MonoBehaviour
 {
     private Transform target;
 
+    public bool isSlowing;
+
     public float speed = 10f;
 
     public int damage = 50;
@@ -44,10 +46,21 @@ public class Projectile : MonoBehaviour
 
     void Damage(Transform enemy)
     {
+
         Enemy e = enemy.GetComponent<Enemy>();
+
         if(e != null)
         {
-            e.TakeDamage(damage);
+
+            if (isSlowing)
+            {
+                EnemyMovement eSpeed = enemy.GetComponent<EnemyMovement>();
+                eSpeed.ApplySlow(0.75f, 2f);
+            }
+            else
+            {
+                e.TakeDamage(damage);
+            }
         }
     }
 
