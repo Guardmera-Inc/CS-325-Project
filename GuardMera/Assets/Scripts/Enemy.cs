@@ -9,8 +9,8 @@ public class Enemy : MonoBehaviour
     public float currentHealth;
     [SerializeField]
     private float currentHealthDecimal;
-    [SerializeField]
-    private bool damageTaken = false;
+    //[SerializeField]
+    //private bool damageTaken = false;
     [SerializeField]
     private SpriteRenderer sR;
 
@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        damageTaken = true;
+        //damageTaken = true;
         currentHealth -= amount;
         ChangeColor();
 

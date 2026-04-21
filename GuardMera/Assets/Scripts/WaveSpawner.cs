@@ -79,9 +79,9 @@ public class WaveSpawner : MonoBehaviour
 
     }
 
-    void SpawnEnemy(GameObject enemy, int currWaveIndex) // changed by mahad
+    void SpawnEnemy(GameObject enemyPrefab, int currWaveIndex) // changed by mahad
     {
-        GameObject spawnedEnemy = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        GameObject spawnedEnemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
         Enemy enemy = spawnedEnemy.GetComponent<Enemy>();
         if(enemy != null)
         {
@@ -89,7 +89,7 @@ public class WaveSpawner : MonoBehaviour
             enemy.maxHealth = Mathf.RoundToInt(scaledHealth);
             enemy.currentHealth = enemy.maxHealth;
         }
-        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        //Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
     }
 
 }
