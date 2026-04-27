@@ -5,9 +5,11 @@ public class NodeBehaviour : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Color orig_color;
 
-    private bool hasTower = false;
+    public bool hasTower = false;
 
-    public GameObject Tower;
+
+
+    public GameObject towerData;
 
     void Start()
     {
@@ -21,7 +23,7 @@ public class NodeBehaviour : MonoBehaviour
             spriteRenderer.color = Color.red;
             if (!hasTower && Input.GetMouseButtonDown(0))
             {
-                Instantiate(GameMaster.instance.selectedTowerPrefab, transform.position, Quaternion.identity);
+                towerData = Instantiate(GameMaster.instance.selectedTowerPrefab, transform.position, Quaternion.identity);
                 hasTower = true;
                 Debug.Log("turret placed");
                 GameMaster.instance.SpendMoney(GameMaster.instance.selectedTowerCost);
@@ -45,11 +47,18 @@ public class NodeBehaviour : MonoBehaviour
                     spriteRenderer.color = Color.yellow;
                 }
             }
-        }
-
-        
+        } 
     }
 
+    public void RemoveTower()
+    {
+        if (towerData != null)
+        {
+            Destroy(towerData);
+            hasTower = false;
+            towerData = null;
+        }
+    }
     void OnMouseExit()
     {
         spriteRenderer.color = orig_color;

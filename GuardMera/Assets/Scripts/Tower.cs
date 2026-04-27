@@ -27,6 +27,8 @@ public class Tower : MonoBehaviour
 
     [Header("Upgrade Specific Specs")]
 
+    public string towerName;
+
     public int bulletCount = 1;
     public float spreadAngle = 0f;
 

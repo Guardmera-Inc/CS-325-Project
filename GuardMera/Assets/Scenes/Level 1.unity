@@ -3832,6 +3832,7 @@ GameObject:
   - component: {fileID: 561856128}
   - component: {fileID: 561856131}
   - component: {fileID: 561856130}
+  - component: {fileID: 561856132}
   m_Layer: 0
   m_Name: UpgradePanel
   m_TagString: Untagged
@@ -3897,6 +3898,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561856127}
   m_CullTransparentMesh: 1
+--- !u!114 &561856132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561856127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f4fdcfe35c44b7789d0254d3b8e5b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  selectedTower: {fileID: 0}
+  fuseButton: {fileID: 0}
+  baseTowerType: 
+  selectedTowerType: 
 --- !u!4 &588045333 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8821292186083919742, guid: 3340225033bad1c448160c0c4ff0187b, type: 3}
