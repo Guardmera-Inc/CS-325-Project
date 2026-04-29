@@ -21,7 +21,7 @@ public class NodeBehaviour : MonoBehaviour
             spriteRenderer.color = Color.red;
             if (!hasTower && Input.GetMouseButtonDown(0))
             {
-                Instantiate(GameMaster.instance.selectedTowerPrefab, transform.position, Quaternion.identity);
+                Instantiate(GameMaster.instance.selectedTowerPrefab, transform.position, Quaternion.Euler(0, 0, -90f));
                 hasTower = true;
                 Debug.Log("turret placed");
                 GameMaster.instance.SpendMoney(GameMaster.instance.selectedTowerCost);

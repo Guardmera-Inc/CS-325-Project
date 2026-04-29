@@ -9,6 +9,8 @@ public class Tower : MonoBehaviour
     [Header("General")]
     public float range = 15f;
 
+    public Animator animator;
+
     //Targeting Specifics Maybe
 
     [Header("Bullet Tower(s) (default) Specs")]
@@ -54,6 +56,7 @@ public class Tower : MonoBehaviour
             }
             else
             {
+                animator.SetBool("IsShoot", false);
                 target = null;
                 targetEnemy = null;
             }
@@ -86,6 +89,7 @@ public class Tower : MonoBehaviour
     {
         GameObject projectileObject = (GameObject)Instantiate(projectilePf, firePoint.position, firePoint.rotation);
         Projectile projectile = projectileObject.GetComponent<Projectile>();
+        animator.SetBool("IsShoot", true);
 
         if(projectile != null)
         {
