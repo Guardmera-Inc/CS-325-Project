@@ -14,7 +14,7 @@ public class NodeBehaviour : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        orig_color = spriteRenderer.material.color;
+        orig_color = spriteRenderer.color;
         Color startColor = orig_color;
         startColor.a = 0f;
         spriteRenderer.color = startColor;
@@ -23,7 +23,7 @@ public class NodeBehaviour : MonoBehaviour
     {
         if (!hasTower && GameMaster.instance.CanBuild())
         {
-            spriteRenderer.color = new Color(1f,0f,0f, hoverTransparency);
+            spriteRenderer.color = new Color(0.5f,0.5f,0.5f, hoverTransparency);
             if (!hasTower && Input.GetMouseButtonDown(0))
             {
                 itower = Instantiate(GameMaster.instance.selectedTowerPrefab, transform.position, Quaternion.Euler(0,0,-90f));
