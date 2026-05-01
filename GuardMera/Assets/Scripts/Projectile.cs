@@ -21,6 +21,11 @@ public class Projectile : MonoBehaviour
 
     public GameObject impactFX;
 
+    void Start()
+    {
+        Destroy(gameObject, lifeSpan);
+    }
+
     public void Seek(Transform _target)
     {
         target = _target;
@@ -94,6 +99,29 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            HitTargets(collision.transform);
+        }
+    }
+
+    void HitTargets(Transform enemyHit)
+    {
+        if (impactFX != null)
+        {
+            Instantiate(impactFX, transform.position, transform.rotation);
+        }
+
+        Damage(enemyHit);
+        Destroy(gameObject);
+    }
 }
+
+
+
+
+
 
 

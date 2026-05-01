@@ -10,12 +10,14 @@ public class Tower : MonoBehaviour
     [Header("General")]
     public float range = 15f;
 
+    public Animator animator;
+
     //Targeting Specifics Maybe
 
     [Header("Bullet Tower(s) (default) Specs")]
     public float fireRate = 1f;
     public float fireCD = 0f;
-    public GameObject bulletPf;
+    public GameObject projectilePf;
 
     [Header("Melee Specific Specs")]
     public bool isMelee;
@@ -25,6 +27,13 @@ public class Tower : MonoBehaviour
     public float turnSpeed = 10f;
     public string enemyTag = "Enemy";
     public Transform firePoint;
+
+    [Header("Upgrade Specific Specs")]
+
+    public string tname = "";
+
+    public int bulletCount = 1;
+    public float spreadAngle = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,6 +64,7 @@ public class Tower : MonoBehaviour
             }
             else
             {
+                animator.SetBool("IsShoot", false);
                 target = null;
                 targetEnemy = null;
             }
@@ -66,8 +76,6 @@ public class Tower : MonoBehaviour
         if(target != null)
         {
             LockOn();
-<<<<<<< Updated upstream
-=======
             if(fireCD <= 0f)
             {
                 Shoot();
@@ -75,20 +83,34 @@ public class Tower : MonoBehaviour
             }
 
             fireCD -= Time.deltaTime;
->>>>>>> Stashed changes
         }
     }
 
     void LockOn()
     {
         Vector2 dir = target.position - transform.position;
-        //Quaternion lookRotation = Quaternion.LookRotation(dir);
-        //Vector3 rotation = Quaternion.Lerp(this.transform.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         this.transform.right = dir;
     }
 
-<<<<<<< Updated upstream
-=======
+    void Shoot()
+    {
+        float startAngle = -spreadAngle / 2f;
+        float angleStep = (bulletCount > 1) ? (spreadAngle / (bulletCount - 1)) : 0;
+        animator.SetBool("IsShoot", true);
+
+        for (int i = 0; i < bulletCount; i++)
+        {
+            float currentAngle = startAngle + (i * angleStep);
+            GameObject projectileObject = (GameObject)Instantiate(projectilePf, firePoint.position, firePoint.rotation);
+            projectileObject.transform.Rotate(0,0,currentAngle);
+            Projectile projectile = projectileObject.GetComponent<Projectile>();
+            
+            if(projectile != null)
+            {
+                projectile.Seek(target);
+            }
+        }
+    }
     void Shoot()
     {
         float startAngle = -spreadAngle / 2f;
@@ -122,7 +144,6 @@ public class Tower : MonoBehaviour
         }
     }
 
->>>>>>> Stashed changes
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
