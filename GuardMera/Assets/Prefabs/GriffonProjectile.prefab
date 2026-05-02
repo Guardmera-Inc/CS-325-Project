@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   isHoming: 0
   speed: 75
-  lifeSpan: 5
+  lifeSpan: 3
   damage: 100
   isSlowing: 0
   impactFX: {fileID: 0}

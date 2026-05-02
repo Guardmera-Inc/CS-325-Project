@@ -25,6 +25,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4797751251059157224, guid: 94a9d181438148f4192f2e6e984b22f4, type: 3}
+      propertyPath: tname
+      value: Griffin
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797751251059157224, guid: 94a9d181438148f4192f2e6e984b22f4, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 9064479096349483330}

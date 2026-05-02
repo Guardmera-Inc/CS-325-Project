@@ -52,6 +52,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1663622924891298497, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
+      propertyPath: tname
+      value: Bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663622924891298497, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
+      propertyPath: bulletCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663622924891298497, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
+      propertyPath: spreadAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663622924891298497, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
+      propertyPath: projectilePf
+      value: 
+      objectReference: {fileID: 4249330161930501391, guid: 02aed752110b4e746bc1ff2d926d51e8, type: 3}
     - target: {fileID: 2986257084398152355, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
