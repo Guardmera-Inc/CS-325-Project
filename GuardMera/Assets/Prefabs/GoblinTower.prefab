@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1095197947203082314
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1371839873635636557, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4980254495151145279, guid: 17cd4f09274e4904b89aa33068659532, type: 3}
+    - target: {fileID: 2989894547405928771, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_Name
+      value: GoblinTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720895933096433614, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720895933096433614, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720895933096433614, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756779743153573436, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.29575
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756779743153573436, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.17248
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756779743153573436, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756779743153573436, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756779743153573436, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756779743153573436, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756779743153573436, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756779743153573436, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756779743153573436, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756779743153573436, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7158795693211765816, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9146446910249394374}
+  m_SourcePrefab: {fileID: 100100000, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+--- !u!1 &7812560612272968818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7158795693211765816, guid: 412e62f3b2742fb45a5a27e9a3421918, type: 3}
+  m_PrefabInstance: {fileID: 1095197947203082314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &9146446910249394374
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812560612272968818}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 500c811d3c6a7ab4983fa84513bd9a9a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

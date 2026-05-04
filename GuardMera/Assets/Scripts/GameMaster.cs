@@ -22,6 +22,7 @@ public class GameMaster : MonoBehaviour
     public FuseMenu fuseMenuScript;
 
     public GameObject hydraPrefab;
+    public GameObject griffinPrefab;
     
 
     void Awake()
@@ -101,6 +102,7 @@ public class GameMaster : MonoBehaviour
         GameObject finalPrefab = null;
 
         if (recipe == "Snake_Snake") finalPrefab = hydraPrefab;
+        if (recipe == "Bird_Lion" || recipe == "Lion_Bird" ) finalPrefab = hydraPrefab;
 
         if (finalPrefab != null)
         {

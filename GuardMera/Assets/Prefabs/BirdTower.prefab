@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6394772186967499, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
       propertyPath: m_Name
-      value: Bird Variant Variant
+      value: BirdTower
       objectReference: {fileID: 0}
     - target: {fileID: 283960483935300512, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
       propertyPath: m_LocalPosition.x

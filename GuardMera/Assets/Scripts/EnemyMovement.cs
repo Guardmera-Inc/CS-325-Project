@@ -38,6 +38,12 @@ public class EnemyMovement : MonoBehaviour
         }
 
         Vector2 dir = target.position - transform.position;
+
+        //points direction at waypoint
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+
+
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
         if(Vector2.Distance(transform.position, target.position) <= changeDirThreshold)
         {
