@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4797751251059157224, guid: 438ba347916894a6ca99fdfca8700c23, type: 3}
+      propertyPath: towerIcon
+      value: 
+      objectReference: {fileID: -2253848253703577704, guid: 4039bc2c58d2a0f45873cefe5c6184ff, type: 3}
     - target: {fileID: 5894794361642205308, guid: 438ba347916894a6ca99fdfca8700c23, type: 3}
       propertyPath: m_Controller
       value: 

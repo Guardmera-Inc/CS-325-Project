@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour
 {
 
     public int maxHealth = 150;
+    public int moneyValue = 10;
 
     [HideInInspector]
     public float currentHealth;
@@ -41,6 +42,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        GameMaster.instance.GainMoney(moneyValue);
         Destroy(gameObject);
     }
 

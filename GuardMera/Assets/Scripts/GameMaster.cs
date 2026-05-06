@@ -20,9 +20,12 @@ public class GameMaster : MonoBehaviour
     public GameObject selectedNode;
 
     public FuseMenu fuseMenuScript;
+    public int dualFusionCost = 300;
+    public int hybridFusionCost = 500;
 
     public GameObject hydraPrefab;
     public GameObject griffinPrefab;
+    public GameObject wyvernPrefab;
     
 
     void Awake()
@@ -70,6 +73,11 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+    public void GainMoney(int amount)
+    {
+        money += amount;
+    }
+
     public void SelectNode( GameObject node)
     {
         selectedTowerPrefab = null;
@@ -77,9 +85,10 @@ public class GameMaster : MonoBehaviour
         selectedNode = node;
         NodeBehaviour nb = node.GetComponent<NodeBehaviour>();
         string tName = nb.itower.GetComponent<Tower>().tname;
+        Sprite tSprite = nb.itower.GetComponent<Tower>().towerIcon;
         shopMenu.SetActive(false);
         fuseMenu.SetActive(true);
-        fuseMenuScript.SetupMenu(tName);
+        fuseMenuScript.SetupMenu(tName, tSprite);
     }
 
     public void ReturnToShop()
@@ -96,16 +105,36 @@ public class GameMaster : MonoBehaviour
         Debug.Log("YOU DIED");
     }
 
-    public void CombineTower(string baseName, string addition)
+    public int GetFusionCost(string baseName, string addition)
     {
+        if (baseName == addition)
+        {
+            return dualFusionCost;
+        }
+        else
+        {
+            return hybridFusionCost;
+        }
+    }
+
+
+
+    public void CombineTower(string baseName, string addition, int cost)
+    {
+        if(money < cost)
+        {
+            return;
+        }
         string recipe = baseName + "_" + addition;
         GameObject finalPrefab = null;
 
         if (recipe == "Snake_Snake") finalPrefab = hydraPrefab;
         if (recipe == "Bird_Lion" || recipe == "Lion_Bird" ) finalPrefab = griffinPrefab;
+        if (recipe == "Bird_Snake" || recipe == "Snake_Bird") finalPrefab = wyvernPrefab;
 
         if (finalPrefab != null)
         {
+            SpendMoney(cost);
             NodeBehaviour nb = selectedNode.GetComponent<NodeBehaviour>();
             nb.RemoveTower(); 
             

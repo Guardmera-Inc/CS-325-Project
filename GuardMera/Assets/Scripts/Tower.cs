@@ -31,6 +31,8 @@ public class Tower : MonoBehaviour
 
     public string tname = "";
 
+    public Sprite towerIcon;
+
     public int bulletCount = 1;
     public float spreadAngle = 0f;
 

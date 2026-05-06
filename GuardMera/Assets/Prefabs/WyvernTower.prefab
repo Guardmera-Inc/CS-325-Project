@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6394772186967499, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
       propertyPath: m_Name
-      value: BirdTower
+      value: WyvernTower
       objectReference: {fileID: 0}
     - target: {fileID: 283960483935300512, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 283960483935300512, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 283960483935300512, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 283960483935300512, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1663622924891298497, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
       propertyPath: tname
@@ -83,13 +83,42 @@ PrefabInstance:
     - target: {fileID: 6556717892409065773, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7053311295380912571, guid: 6e3b3ab66e72dd147bd26446c3ca0338, type: 3}
+      objectReference: {fileID: -661747474237866137, guid: 7ff36b11c37508c42b7a36507f7c8cc0, type: 3}
     - target: {fileID: 9064479096349483330, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 328fe3091d03a0043bc5ed3ea96677b9, type: 2}
-    m_RemovedComponents: []
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1663622924891298497, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6394772186967499, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5304819285471948782}
   m_SourcePrefab: {fileID: 100100000, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
+--- !u!1 &652958925578187526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6394772186967499, guid: f6c3078bc2576444cba0acfdb5e24d01, type: 3}
+  m_PrefabInstance: {fileID: 655694497968922317}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5304819285471948782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652958925578187526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a716233f989472396ea94ff4379976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  centerPoint: {x: 0, y: 0, z: 0}
+  radiusX: 15
+  radiusY: 5
+  flySpeed: 2.5
+  turnSpeed: 360
+  burstProjectilePrefab: {fileID: 8427073510849344137, guid: f65495ef58e3a45b9a1cbf2b38da5f82, type: 3}
+  projectilesPerBurst: 8
+  burstInterval: 0.4
